@@ -1,1 +1,1 @@
-# node-boilerplate
+# mediawiki-bot
