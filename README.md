@@ -6,15 +6,16 @@
 
 ```js
 interface Secrets {
-  userAgent: string
+  userAgent?: string
   sites: SecretsSite[]
 }
 
 interface SecretsSite {
-  name?: string
+  name?: string // 站点名称
   protocol: 'http' | 'https'
-  server: string
-  path: string
+  server: string // 等同于 location.host
+  path: string // 等同于 wgScriptPath
+  // 由 MediaWiki 生成的机器人账号
   username: string
   password: string
 }

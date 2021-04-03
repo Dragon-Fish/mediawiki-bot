@@ -4,7 +4,7 @@ const mwApi = require('../modules/mwApi')
 
 const bot = new nodemw({
   ...secret.sites[0],
-  userAgent: secret.userAgent,
+  userAgent: secret?.userAgent,
   debug: true,
 })
 const api = new mwApi(bot)
