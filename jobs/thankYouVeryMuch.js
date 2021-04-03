@@ -1,16 +1,6 @@
-const nodemw = require('nodemw')
-const secret = require('../secret')
-const mwApi = require('../modules/mwApi')
 const sleep = require('../utils/sleep')
 
-const bot = new nodemw({
-  ...secret.sites.萌娘百科,
-  userAgent: secret.userAgent,
-  debug: true,
-})
-const api = new mwApi(bot)
-
-bot.logIn(async () => {
+module.exports = ({ api, bot }) => {
   bot.getUserContribs(
     {
       user: '星海子',
@@ -43,4 +33,4 @@ bot.logIn(async () => {
     await sleep(8000)
     return loopThank(list, max, count)
   }
-})
+}
