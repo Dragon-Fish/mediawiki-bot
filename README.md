@@ -7,12 +7,11 @@
 ```js
 interface Secrets {
   userAgent: string
-  sites: {
-    ...SecretsSite
-  }
+  sites: SecretsSite[]
 }
 
 interface SecretsSite {
+  name?: string
   protocol: 'http' | 'https'
   server: string
   path: string

@@ -3,7 +3,7 @@ const secret = require('../secret')
 const mwApi = require('../modules/mwApi')
 
 const bot = new nodemw({
-  ...secret.sites.萌娘百科,
+  ...secret.sites[0],
   userAgent: secret.userAgent,
   debug: true,
 })
