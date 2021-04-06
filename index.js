@@ -1,5 +1,5 @@
 const nodemw = require('nodemw')
-const secret = require('../secret')
+// const secret = require('../secret')
 const mwApi = require('../modules/mwApi')
 
 const bot = new nodemw({
