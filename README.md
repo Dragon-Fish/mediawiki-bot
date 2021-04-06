@@ -2,7 +2,7 @@
 
 个人的 MediaWiki 自动程序。
 
-## 密钥结构
+## ~~密钥结构~~
 
 ```js
 interface Secrets {
@@ -20,6 +20,12 @@ interface SecretsSite {
   password: string
 }
 ```
+
+## 环境变量
+
+- `MW_USERNAME`
+- `MW_PASSWORD`
+- `USER_AGENT`
 
 ## 自动作业列表
 

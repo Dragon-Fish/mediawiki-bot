@@ -1,7 +1,6 @@
-name: Production Build
+name: Manual Run
 
-on:
-  workflow_dispatch
+on: workflow_dispatch
 
 jobs:
   build:
@@ -27,11 +26,10 @@ jobs:
       - name: 安装项目依赖
         run: |
           yarn install
-      - name: 测试项目
-        run: |
-          yarn test
-      - name: 构建项目并打包发布
-        run: |
-          npm run publish:stable
+      - name: 运行
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          MW_USERNAME: ${{ secrets.MW_USERNAME }}
+          MW_PASSWORD: ${{ secrets.MW_PASSWORD }}
+          USER_AGENT: ${{ secrets.USER_AGENT }}
+        run: |
+          yarn start

@@ -3,8 +3,12 @@ const secret = require('../secret')
 const mwApi = require('../modules/mwApi')
 
 const bot = new nodemw({
-  ...secret.sites[0],
-  userAgent: secret?.userAgent,
+  protocol: 'https',
+  server: 'zh.moegirl.org.cn',
+  path: '',
+  username: process.env.MW_USERNAME,
+  password: process.env.MW_PASSWORD,
+  userAgent: process.env.USER_AGENT,
   debug: true,
 })
 const api = new mwApi(bot)
